@@ -32,6 +32,9 @@ products = [
 
 # TODO: write some Python code here to produce the desired output
 
+
+#products part 1
+
 products_count=len(products) # how many items in products variable
 
 print("--------------")
@@ -44,14 +47,6 @@ def sort_by_name(any_product):
 
 sorted_products = sorted(products, key=sort_by_name)
 
-#{
-# "id":1, 
-# "name": "Chocolate Sandwich Cookies", 
-# "department": "snacks", 
-# "aisle": "cookies cakes", 
-# "price": 3.50
-# }
-
 for p in sorted_products:
     #print(my_product["name"])
 
@@ -62,11 +57,22 @@ for p in sorted_products:
 # Could also be --> price_usd = "( ${0:.2f})".format(my_product["price"]) 
 #               --> print(" ... " + my_product["name"] + price_usd)
 
+# department part 2
 
+departments =[]
+for p in products:
+    #print(p["department"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
 
+department_count=len(departments) # how many items in products variable
 
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
 
-
+for d in departments:
+    print(d)
 
 
 
