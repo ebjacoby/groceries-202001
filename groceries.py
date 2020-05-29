@@ -79,11 +79,9 @@ print("--------------")
 unique_departments.sort() #sorts in place
 
 for d in unique_departments:
-    print(d.title())
-
-
-
-
+    matching_products = [p for p in products if p["department"] == d]
+    matching_products_count = len(matching_products)
+    print(d.title() + " (" + str(matching_products_count) + " products)")
 
 
 
